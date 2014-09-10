@@ -4,16 +4,16 @@
   "description": "yet another A+ promise library",
   "main": "p.js",
   "scripts": {
-    "pretest" : "jshint p.js",
+    "pretest": "node node_modules/jshint/bin/jshint p.js",
     "test": "node test.js",
-    "posttest": "uglifyjs p.js > p.min.js --mangle"
+    "posttest": "node node_modules/uglify-js/bin/uglifyjs p.js > p.min.js --mangle"
   },
   "author": "Frederik Ring <frederik.ring@gmail.com>",
-  "private" : true,
+  "private": true,
   "license": "MIT",
   "devDependencies": {
-    "promises-aplus-tests": "^2.0.5"
-    , "mocha": "*"
-    , "uglify-js": "*"
+    "jshint": "^2.5.5",
+    "promises-aplus-tests": "^2.0.5",
+    "uglify-js": "*"
   }
 }

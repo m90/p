@@ -56,7 +56,6 @@
 	};
 
 	var next = (function(){
-		console.log(this);
 		if (this.process && isFunction(this.process.nextTick)){
 			return this.process.nextTick;
 		} else if (this.setImmediate){
