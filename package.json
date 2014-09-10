@@ -1,0 +1,19 @@
+{
+  "name": "p",
+  "version": "0.1.0",
+  "description": "yet another A+ promise library",
+  "main": "p.js",
+  "scripts": {
+    "pretest" : "jshint p.js",
+    "test": "node test.js",
+    "posttest": "uglifyjs p.js > p.min.js --mangle"
+  },
+  "author": "Frederik Ring <frederik.ring@gmail.com>",
+  "private" : true,
+  "license": "MIT",
+  "devDependencies": {
+    "promises-aplus-tests": "^2.0.5"
+    , "mocha": "*"
+    , "uglify-js": "*"
+  }
+}
