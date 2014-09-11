@@ -1,5 +1,5 @@
 {
-  "name": "p",
+  "name": "ppromise",
   "version": "0.1.0",
   "description": "yet another A+ promise library",
   "main": "p.js",
@@ -9,7 +9,6 @@
     "posttest": "node node_modules/uglify-js/bin/uglifyjs p.js > p.min.js --mangle"
   },
   "author": "Frederik Ring <frederik.ring@gmail.com>",
-  "private": true,
   "license": "MIT",
   "devDependencies": {
     "jshint": "^2.5.5",

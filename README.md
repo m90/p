@@ -1,5 +1,10 @@
 # p
-> yet another A+ promise library (small enough to include in your own library)
+> yet another A+ Promise (small enough to include in your own library)
+
+Install via npm:
+```sh
+$ npm install ppromise --save
+```
 
 In addition to the [specified A+ behavior](https://github.com/promises-aplus/promises-spec):
 ```js
@@ -30,6 +35,7 @@ Promise.all([promiseA, promiseB, promiseC]).then(function(results){
 and the creation of `Deferred`s when passing no arguments to the constructor:
 ```js
 var dfd = new Promise();
+var promise = dfd.promise(); // this will only contain the `then`
 fs.readFile('something.json', {encoding : 'utf-8'}, function(err, result){
     if (err){
         dfd.reject(err);

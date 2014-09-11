@@ -164,6 +164,11 @@
 				reject.apply(this, [].slice.call(arguments));
 				return this;
 			};
+			this.promise = function(){
+				return {
+					then : this.then
+				};
+			};
 		} else {
 			// a value was passed, we'll instantly resolve with that value
 			resolve(value);
