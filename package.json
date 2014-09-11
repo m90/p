@@ -1,13 +1,24 @@
 {
   "name": "ppromise",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "yet another A+ promise library",
   "main": "p.js",
+  "repository": "https://github.com/m90/p.git",
   "scripts": {
     "pretest": "node node_modules/jshint/bin/jshint p.js",
     "test": "node test.js",
     "posttest": "node node_modules/uglify-js/bin/uglifyjs p.js > p.min.js --mangle"
   },
+  "homepage": "https://github.com/m90/p",
+  "bugs": {
+    "url": "https://github.com/m90/p/issues"
+  },
+  "keywords": [
+    "promise",
+    "deferred",
+    "a plus",
+    "a+"
+  ],
   "author": "Frederik Ring <frederik.ring@gmail.com>",
   "license": "MIT",
   "devDependencies": {
