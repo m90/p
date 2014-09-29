@@ -1,6 +1,6 @@
 {
   "name": "ppromise",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "yet another A+ promise library",
   "main": "p.js",
   "repository": "https://github.com/m90/p.git",

@@ -20,16 +20,6 @@
 		return Object.prototype.toString.call(el) === '[object Object]';
 	}
 
-	function compact(arr){
-		var res = [];
-		for (var i = 0; i < arr.length; i++){
-			if (!!arr[i]){
-				res.push(arr[i]);
-			}
-		}
-		return res;
-	}
-
 	function tryResolution(builderFn, onFulfilled, onRejected){
 		var done = false;
 		try{
@@ -178,7 +168,7 @@
 
 	Promise.all = function(args){
 		return new Promise(function(resolve, reject){
-			var result = [];
+			var result = [], todo = args.length;
 			function digest(i, val){
 				if (isObject(val) && isFunction(val.then)){
 					val.then(function(newVal){
@@ -186,7 +176,8 @@
 					}, reject);
 				} else {
 					result[i] = val;
-					if (compact(result).length === args.length){
+					todo--;
+					if (!todo){
 						resolve(result);
 					}
 				}
